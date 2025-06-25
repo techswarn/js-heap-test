@@ -12,11 +12,10 @@ fastify.get('/', async function handler (request, reply) {
         while (true) {
             arr.push(new Array(1e6).fill('*'));
             console.log(`Allocated ${arr.length} million-element arrays`);
+            console.log(process.memoryUsage());
           }
     }catch(err){
-        console.log(err)
-        const memory = process.memoryUsage();
-        return { memory }
+        return { err }
     }
 
 })
