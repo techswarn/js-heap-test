@@ -14,7 +14,9 @@ fastify.get('/', async function handler (request, reply) {
             console.log(`Allocated ${arr.length} million-element arrays`);
           }
     }catch(err){
-        return { hello: err }
+        console.log(err)
+        const memory = process.memoryUsage();
+        return { memory }
     }
 
 })
