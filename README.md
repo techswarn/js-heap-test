@@ -1,3 +1,3 @@
 # js-heap-test
 
-Sample project to spike memory usage
+Sample project to spike memory usage.
